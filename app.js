@@ -33,9 +33,9 @@ const displayPokemon = (pokemon) => {
     // Generating HTML tags from the fetched data
     const pokemonHTMLString = pokemon.map ( pokemon => `
     <li class="card">
-        <img src="${pokemon.image}" >
-        <h2>${pokemon.id}. ${pokemon.name}</h2>
-        <p>Type: ${pokemon.type}</p>
+        <img class="card-image" src="${pokemon.image}" >
+        <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
+        <p class="card-subtitle">Type: ${pokemon.type}</p>
     </li>
     `).join(" "); // join used to join the array created from map method
     pokedex.innerHTML = pokemonHTMLString;
