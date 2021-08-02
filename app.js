@@ -1,3 +1,7 @@
+const pokedex = document.getElementById("pokedex");
+
+console.log(pokedex);
+
 const fetchPokemon = () => {
     console.log(`fetching PokeMon`);
     
@@ -23,7 +27,18 @@ const fetchPokemon = () => {
 }
 
 const displayPokemon = (pokemon) => {
+    // To test fetched data
     console.log(pokemon);
+    
+    // Generating HTML tags from the fetched data
+    const pokemonHTMLString = pokemon.map ( pokemon => `
+    <li class="card">
+        <img src="${pokemon.image}" >
+        <h2>${pokemon.id}. ${pokemon.name}</h2>
+        <p>Type: ${pokemon.type}</p>
+    </li>
+    `).join(" "); // join used to join the array created from map method
+    pokedex.innerHTML = pokemonHTMLString;
 }
 
 fetchPokemon();
