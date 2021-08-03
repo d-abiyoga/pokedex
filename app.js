@@ -1,6 +1,6 @@
 const pokedex = document.getElementById("pokedex");
 
-console.log(pokedex);
+// console.log(pokedex);
 
 const fetchPokemon = () => {
     console.log(`fetching PokeMon`);
